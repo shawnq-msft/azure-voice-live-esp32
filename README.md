@@ -1,3 +1,44 @@
+# Azure Voice Live ESP32 Client
+
+Azure Voice Live ESP32 Client is an ESP32-S3 AI voice assistant demo for Azure Voice Live, Azure Speech, and real-time edge audio streaming.
+
+中文：这是一个面向 AI 开发者的 ESP32-S3 语音助手示例，用于连接 Azure Voice Live、Azure Speech 和实时音频流，构建边缘 AI 语音 Agent。
+
+This repository is based on the XiaoZhi ESP32 AI chatbot project and is used as an Azure Voice Live / Azure Speech edge voice AI exploration repo.
+
+## Features
+
+- ESP32-S3 and ESP-IDF firmware baseline for voice assistant hardware.
+- Board definitions, audio input/output paths, and firmware build scripts for edge voice devices.
+- A practical starting point for connecting embedded audio clients to Azure Voice Live, Azure Speech, or a compatible real-time voice agent service.
+
+## Quickstart
+
+```bash
+# Install ESP-IDF 5.3 or later, then install Python dependencies used by the scripts.
+python3 ./scripts/release.py [board-name]
+```
+
+For board-specific options, run `idf.py menuconfig` or update the board `config.json` files under `main/boards`.
+
+## Hardware
+
+- ESP32-S3 development board with microphone and speaker support.
+- Supported board profiles are under `main/boards`.
+- Audio behavior depends on the selected board profile and codec wiring.
+
+## Use Cases
+
+- ESP32-S3 AI voice assistant prototypes.
+- Azure Voice Live and Azure Speech edge audio streaming experiments.
+- Wake word, push-to-talk, interruption, and embedded voice UI testing.
+
+If this project helps you build AI voice agents, consider starring the repo.
+
+如果这个项目帮你跑通了 AI 语音 Agent，欢迎 Star，也欢迎提交 Issue 交流复现问题。
+
+---
+
 > **修改笔记：**
 > - 增加可自定义热点名称的选项 `CONFIG_CUSTOM_SSID_PREFIX="AI-VOX"`
 > - 增加 NULLLAB AI-Vox 开发版的的两个开发案例：
